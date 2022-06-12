@@ -1,1 +1,2 @@
-# SMSAdvancedJavaProject
+## SMSAdvancedJavaProject
+#Requrements of the project 
