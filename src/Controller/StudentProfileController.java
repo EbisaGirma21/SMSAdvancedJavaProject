@@ -55,7 +55,7 @@ public class StudentProfileController implements Initializable {
     AnchorPane mainancher;
 
     @FXML
-    private Label userNameLabel;
+    Label userNameLabel;
     StudentQueries studentQueries = new StudentQueries();
     private ObservableList<Student> studentInfo = FXCollections.observableArrayList();
 
@@ -68,7 +68,7 @@ public class StudentProfileController implements Initializable {
         lastNameLabel.setText(studentInfo.get(0).getLastName());
         idLabel.setText(studentInfo.get(0).getUserId());
         Gender.setText(studentInfo.get(0).getGender());
-        userNameLabel.setText(studentInfo.get(0).getUsername());
+        userNameLabel.setText(Student.getCurrentUser());
 
         logoutBtn.setOnAction(e -> {
             AnchorPane root;
@@ -79,7 +79,6 @@ public class StudentProfileController implements Initializable {
                 stage.setScene(scene);
                 stage.show();
             } catch (IOException e1) {
-
                 e1.printStackTrace();
             }
 

@@ -115,7 +115,6 @@ public class StudentMarkController implements Initializable {
     void touchHandler(KeyEvent event) {
         if (event.getCode().equals(KeyCode.ENTER)) {
             int confirm = markQueries.isThereStudent(selectedStudent, subjectCode);
-            System.out.println(confirm);
             if (confirm == 0) {
                 markQueries.addNewMark(selectedStudent, subjectCodeLabel.getText());
                 markTable.setItems(markQueries.getMarkBySubject(sectionId, subjectCode));
@@ -261,10 +260,10 @@ public class StudentMarkController implements Initializable {
 
                 int response = markQueries.updateMark(
                         studentIdTF.getText(),
+                        subjectCode,
                         testTF.getText(),
                         midTF.getText(),
                         finalTF.getText());
-
                 if (response == 1) {
                     markTable.setItems(markQueries.getMarkBySubject(sectionId, subjectCode));
                 }

@@ -69,6 +69,7 @@ public class LoginController implements Initializable {
                 "Admin Portal", "Teacher Portal", "Student Portal"
         };
         accountTypeCB.getItems().addAll(account);
+        accountTypeCB.setValue(account[0]);
 
         loginButton.setOnAction(e -> {
 
@@ -95,10 +96,10 @@ public class LoginController implements Initializable {
                 }
 
             } else if (accountTypeCB.getValue() == "Student Portal") {
-                Student.setCurrentUser(userNameTextFeild.getText());
                 confirm = studentQueries.authenticate(userNameTextFeild.getText(), passwordTextField.getText(),
                         passwordField.getText());
                 if (confirm == 1) {
+                    Student.setCurrentUser(userNameTextFeild.getText());
                     try {
                         AnchorPane root = FXMLLoader
                                 .load(getClass().getClassLoader().getResource("View/StudentProfile.fxml"));

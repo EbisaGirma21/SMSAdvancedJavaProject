@@ -27,7 +27,7 @@ public class MarkQueries {
         try {
             selectAll = connection.prepareCall("call get_all_mark()");
             insertInfo = connection.prepareCall("call insert_mark(?,?,?,?,?,?)");
-            updtateInfo = connection.prepareCall("call update_mark(?,?,?,?,?)");
+            updtateInfo = connection.prepareCall("call update_mark(?,?,?,?,?,?)");
             deleteInfo = connection.prepareCall("call delete_mark(?)");
             getMarkById = connection.prepareCall("call get_mark_by_id(?)");
             getMarkSect = connection.prepareCall("call get_mark_by_sec(?,?)");
@@ -107,13 +107,14 @@ public class MarkQueries {
         }
     }
 
-    public int updateMark(String studID, String test, String mid, String finalExam) {
+    public int updateMark(String studID, String subjectCode, String test, String mid, String finalExam) {
         try {
             updtateInfo.setString(1, studID);
-            updtateInfo.setInt(2, Integer.valueOf(test));
-            updtateInfo.setInt(3, Integer.valueOf(mid));
-            updtateInfo.setInt(4, Integer.valueOf(finalExam));
-            updtateInfo.setInt(5, Integer.valueOf(finalExam) + Integer.valueOf(test) + Integer.valueOf(mid));
+            updtateInfo.setString(2, subjectCode);
+            updtateInfo.setInt(3, Integer.valueOf(test));
+            updtateInfo.setInt(4, Integer.valueOf(mid));
+            updtateInfo.setInt(5, Integer.valueOf(finalExam));
+            updtateInfo.setInt(6, Integer.valueOf(finalExam) + Integer.valueOf(test) + Integer.valueOf(mid));
 
             return updtateInfo.executeUpdate();
         } catch (Exception e) {

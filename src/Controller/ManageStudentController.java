@@ -10,6 +10,7 @@ import com.jfoenix.controls.JFXRadioButton;
 
 import javafx.beans.value.ChangeListener;
 import BaseClass.Student;
+import Model.MarkQueries;
 import Model.SectionQueries;
 import Model.StudentQueries;
 import javafx.beans.value.ObservableValue;
@@ -125,6 +126,7 @@ public class ManageStudentController implements Initializable {
 
     final ObservableList<Student> data = FXCollections.observableArrayList();
     private StudentQueries studentQueries = new StudentQueries();
+    MarkQueries markQueries = new MarkQueries();
 
     String deletedRow, studentId, firstName, middleName, lastName, section;
 
@@ -263,8 +265,9 @@ public class ManageStudentController implements Initializable {
         vBox.setPadding(new Insets(10));
 
         btnYes.setOnAction(e -> {
+            markQueries.deleteMark(deletedRow);
             int response = studentQueries.deleteStudent(deletedRow);
-            System.out.println(response);
+
             if (response == 1) {
                 data.setAll(studentQueries.getStudent());
                 window.close();
