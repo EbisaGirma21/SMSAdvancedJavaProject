@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TeacherProfileController">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="700.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="143.0" prefWidth="680.0" style="-fx-background-color: #4D77FF;">
+               <children>
+                  <ImageView fitHeight="121.0" fitWidth="137.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/Teacher.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="Teacher Portal" textFill="WHITE">
+                     <font>
+                        <Font name="Franklin Gothic Demi Cond" size="31.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="528.0" prefWidth="700.0" VBox.vgrow="ALWAYS">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="409.0" prefWidth="132.0" spacing="10.0">
+                     <children>
+                        <JFXButton fx:id="studentInfoBtn" buttonType="RAISED" contentDisplay="TOP" layoutX="10.0" layoutY="10.0" prefHeight="115.0" prefWidth="157.0" style="-fx-background-color: #4D77FF;" text="Mark Management" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="83.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/Background.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Franklin Gothic Demi Cond" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <Pane prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                        <JFXButton fx:id="logoutBtn" buttonType="RAISED" prefHeight="37.0" prefWidth="101.0" style="-fx-background-color: #4D77FF;" text="Logout" textFill="WHITE" />
+                     </children>
+                     <padding>
+                        <Insets bottom="15.0" />
+                     </padding>
+                  </VBox>
+                  <GridPane alignment="CENTER" hgap="10.0" prefHeight="409.0" prefWidth="499.0" vgap="10.0">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="112.0" minWidth="1.0" prefWidth="37.0" />
+                        <ColumnConstraints halignment="RIGHT" hgrow="ALWAYS" maxWidth="214.0" minWidth="10.0" prefWidth="171.0" />
+                        <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" maxWidth="174.0" minWidth="10.0" prefWidth="170.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="105.0" minWidth="10.0" prefWidth="72.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="133.0" minHeight="10.0" prefHeight="116.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="99.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="79.0" minHeight="0.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="105.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="124.0" minHeight="0.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="135.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="149.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="231.0" minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label prefHeight="51.0" prefWidth="129.0" text="User Profile" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER">
+                           <font>
+                              <Font name="Franklin Gothic Demi Cond" size="17.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIcon iconName="USER" size="3em" />
+                           </graphic>
+                        </Label>
+                        <Label text="First Name" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Franklin Gothic Demi Cond" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label text="Last name" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="Franklin Gothic Demi Cond" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label text="Teacher ID" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="Franklin Gothic Demi Cond" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label text="Middle Name" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Franklin Gothic Demi Cond" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label text="Gender" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                           <font>
+                              <Font name="Franklin Gothic Demi Cond" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label text="Username" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                           <font>
+                              <Font name="Franklin Gothic Demi Cond" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="firstNameLabel" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Label fx:id="middleNameLabel" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <Label fx:id="lastNameLabel" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <Label fx:id="idLabel" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                        <Label fx:id="Gender" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                        <Label fx:id="userNameLabel" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                        <JFXButton fx:id="changeUserNameBtn" buttonType="RAISED" prefHeight="38.0" prefWidth="116.0" style="-fx-background-color: #4D77FF;" text="Change Username" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                        <JFXButton fx:id="changePasswordBtn" buttonType="RAISED" prefHeight="38.0" prefWidth="110.0" style="-fx-background-color: #4D77FF;" text="Change Password" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </GridPane>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

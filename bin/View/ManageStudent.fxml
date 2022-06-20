@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ManageStudentController">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="700.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="153.0" prefWidth="680.0" style="-fx-background-color: #4D77FF;">
+               <children>
+                  <ImageView fitHeight="126.0" fitWidth="136.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/student.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label text="Student Information Management" textFill="WHITE">
+                     <font>
+                        <Font name="Franklin Gothic Demi Cond" size="31.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <VBox prefHeight="507.0" prefWidth="680.0" spacing="15.0">
+               <children>
+                  <TableView fx:id="studentManagmentTable" prefHeight="297.0" prefWidth="680.0" VBox.vgrow="ALWAYS">
+                     <columns>
+                        <TableColumn fx:id="studentIdColumn" prefWidth="75.0" text="Student ID" />
+                        <TableColumn fx:id="firstNameColumn" prefWidth="94.0" text="First Name" />
+                        <TableColumn fx:id="middleNameColumn" prefWidth="91.0" text="Middle Name" />
+                        <TableColumn fx:id="lastNameColumn" prefWidth="77.0" text="Last Name" />
+                        <TableColumn fx:id="genderColumn" prefWidth="72.0" text="Gender" />
+                        <TableColumn fx:id="sectionColumn" prefWidth="63.0" text="Section" />
+                        <TableColumn fx:id="yearColumn" prefWidth="128.0" text="Year" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <GridPane alignment="BOTTOM_CENTER" hgap="10.0" prefHeight="185.0" prefWidth="680.0" vgap="10.0">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="NEVER" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="45.0" minHeight="10.0" prefHeight="29.0" valignment="CENTER" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="71.0" minHeight="10.0" prefHeight="71.0" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="Section" GridPane.columnIndex="5" />
+                        <Label layoutX="10.0" layoutY="30.0" text="First Name" GridPane.columnIndex="1" />
+                        <Label layoutX="10.0" layoutY="30.0" text="Gender" GridPane.columnIndex="4" />
+                        <Label layoutX="10.0" layoutY="30.0" text="Last Name" GridPane.columnIndex="3" />
+                        <Label layoutX="10.0" layoutY="30.0" text="Middle Name" GridPane.columnIndex="2" />
+                        <Label layoutX="560.0" layoutY="30.0" text="Student ID" />
+                        <TextField fx:id="studentIdTextField" GridPane.rowIndex="1" />
+                        <TextField fx:id="firstNameTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="middleNameTextField" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <TextField fx:id="lastNameTextField" prefHeight="25.0" prefWidth="94.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <TextField fx:id="sectionIdTextField" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                        <VBox prefHeight="36.0" prefWidth="66.0" spacing="15.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                           <children>
+                              <JFXRadioButton fx:id="maleRadioBtn" text="Male" />
+                              <JFXRadioButton fx:id="femaleRadioBtn" text="Female" />
+                           </children>
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding>
+                        </VBox>
+                        <JFXButton fx:id="addStudentBtn" buttonType="RAISED" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #4D77FF;" text="Add" textFill="WHITE" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+                        <JFXButton fx:id="editStudentBtn" buttonType="RAISED" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #4D77FF;" text="Edit" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                        <JFXButton fx:id="deleteStudentBtn" buttonType="RAISED" prefHeight="25.0" prefWidth="71.0" style="-fx-background-color: #4D77FF;" text="Delete" textFill="WHITE" GridPane.columnIndex="5" GridPane.halignment="LEFT" GridPane.rowIndex="2" />
+                        <Label fx:id="selectedRowLabel" prefHeight="17.0" prefWidth="294.0" text="No Row Selected By Default" textFill="#ff0202" GridPane.columnSpan="3" GridPane.halignment="LEFT" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Franklin Gothic Demi Cond" size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXButton fx:id="submitBtn" buttonType="RAISED" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #4D77FF;" text="Submit" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </GridPane>
+                  <HBox alignment="CENTER_LEFT" prefHeight="23.0" prefWidth="680.0" spacing="15.0">
+                     <children>
+                        <JFXButton fx:id="backBtn" buttonType="RAISED" onAction="#back" prefHeight="31.0" prefWidth="45.0" style="-fx-background-color: #4D77FF;" text=" ">
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/back.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <FontAwesomeIcon iconName="SEARCH" size="1.5em" wrappingWidth="12.142857551574707" />
+                        <TextField fx:id="searchTextField" prefHeight="25.0" prefWidth="655.0" style="-fx-background-radius: 15,15;" HBox.hgrow="ALWAYS" />
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

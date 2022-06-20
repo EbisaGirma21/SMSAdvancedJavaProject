@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="amchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="382.0" prefWidth="411.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AddAdminController">
+   <children>
+      <GridPane hgap="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" vgap="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <columnConstraints>
+            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="240.0" minWidth="10.0" prefWidth="163.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="288.0" minWidth="10.0" prefWidth="238.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <TextField fx:id="registerFirstName" style="-fx-border-color: #4D77FF;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="registerMiddleName" style="-fx-border-color: #4D77FF;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="registerUsername" style="-fx-border-color: #4D77FF;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <JFXRadioButton fx:id="registerMale" text="Male" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+               <selectedColor>
+                  <Color red="0.3019607961177826" green="0.46666666865348816" blue="1.0" />
+               </selectedColor>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="registerFemale" text="Female" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+               <selectedColor>
+                  <Color red="0.3019607961177826" green="0.46666666865348816" blue="1.0" />
+               </selectedColor>
+            </JFXRadioButton>
+            <PasswordField fx:id="registerPassword" style="-fx-border-color: #4D77FF;" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <PasswordField fx:id="registerConfirmPassword" style="-fx-border-color: #4D77FF;" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <JFXButton fx:id="registerButton" style="-fx-background-color: #4D77FF;" text="Register" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="9" />
+            <Label text="Middle Name" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label text="First Name" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label text="Username" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label text="Gender" GridPane.rowIndex="5">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label text="Password" GridPane.rowIndex="7">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label text="Confirm Password" GridPane.rowIndex="8">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label text="SSN" GridPane.rowIndex="6">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="registerSSn" style="-fx-border-color: #4D77FF;" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.rowIndex="6" GridPane.vgrow="NEVER" />
+            <JFXButton fx:id="cancelButton" prefHeight="25.0" prefWidth="61.0" style="-fx-background-color: #4D77FF;" text="Cancel" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="9" />
+            <Label alignment="TOP_CENTER" text="Registration Page" GridPane.columnSpan="2" GridPane.halignment="CENTER">
+               <font>
+                  <Font name="Arial Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label text="Last Name" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="registerLastName" style="-fx-border-color: #4D77FF;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+         <padding>
+            <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+         </padding>
+      </GridPane>
+   </children>
+</AnchorPane>
