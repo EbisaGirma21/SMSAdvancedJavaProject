@@ -19,12 +19,12 @@
 
 👉 Sample screenshots taken
 
-<img src="Screenshot/login.jpg" alt="Login - Screen" width="400"/><br>
+<img src="Screenshoot/login.jpg" alt="Login - Screen" width="400"/><br>
 
-<img src="Screenshot/admin.jpg" alt="Admin - Screen" width="400"/><br>
+<img src="Screenshoot/admin.jpg" alt="Admin - Screen" width="400"/><br>
 
-<img src="Screenshot/teacher.jpg" alt="Teacher - Screen" width="400"/><br>
+<img src="Screenshoot/teacher.jpg" alt="Teacher - Screen" width="400"/><br>
 
-<img src="Screenshot/student.jpg" alt="Student - Screen" width="400"/><br>
+<img src="Screenshoot/student.jpg" alt="Student - Screen" width="400"/><br>
 
-<img src="Screenshot/assignTeacher.jpg" alt="Assign Teacher - Screen" width="400"/><br>
+<img src="Screenshoot/assignTeacher.jpg" alt="Assign Teacher - Screen" width="400"/><br>
