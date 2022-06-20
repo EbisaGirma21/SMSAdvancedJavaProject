@@ -15,7 +15,7 @@
             "name": "Launch App",
             "request": "launch",
             "mainClass": "App",
-            "projectName": "SMS_a7665dae",
+            "projectName": "SMSAdvancedJavaProject_24c3750",
             "vmArgs": "--module-path \"E:\\Application\\Java Material\\javafx-sdk-17.0.2\\lib\" --add-modules javafx.controls,javafx.fxml"
 
         }
