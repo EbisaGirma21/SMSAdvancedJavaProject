@@ -46,4 +46,10 @@ public class Subject {
         this.sectionCode = sectionCode;
     }
 
+    @Override
+    public String toString() {
+
+        return getSectionCode() + "  " + getSubjectCode();
+    }
+
 }

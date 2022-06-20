@@ -9,6 +9,7 @@ public class Mark {
     int midexam;
     int finalexam;
     int total;
+    String section;
 
     public Mark(String firstName, String lastName, String studentId, String subjectId, int test, int midexam,
             int finalexam, int total) {

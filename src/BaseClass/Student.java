@@ -4,6 +4,7 @@ public class Student extends User {
     String year;
     String sectionId;
     static String currentUser;
+    static String currentUserId;
 
     public Student(String userId, String firstName, String middleName, String lastName, String gender,
             String sectionId, String year, String username, String password) {
@@ -35,6 +36,20 @@ public class Student extends User {
 
     public static void setCurrentUser(String User) {
         currentUser = User;
+    }
+
+    public static String getCurrentUserId() {
+        return currentUserId;
+    }
+
+    public static void setCurrentUserId(String currentUserId) {
+        Student.currentUserId = currentUserId;
+    }
+
+    @Override
+    public String toString() {
+
+        return getUserId() + "   " + getFirstName() + "   " + getMiddleName();
     }
 
 }
