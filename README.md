@@ -27,4 +27,4 @@
 
 <img src="Screenshoot/student.jpg" alt="Student - Screen" width="400"/><br>
 
-<img src="Screenshoot/assignTeacher.jpg" alt="Assign Teacher - Screen" width="400"/><br>
+<img src="Screenshoot/assingTeacher.jpg" alt="Assign Teacher - Screen" width="400"/><br>
