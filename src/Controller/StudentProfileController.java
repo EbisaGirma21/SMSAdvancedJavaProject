@@ -22,6 +22,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -134,7 +135,8 @@ public class StudentProfileController implements Initializable {
         newUserNameTextField.setPromptText("New Username");
 
         JFXButton submit = new JFXButton("Submit");
-
+        submit.setTextFill(Color.WHITE);
+        submit.setStyle("-fx-background-color: #4d77ff; ");
         submit.setButtonType(ButtonType.RAISED);
 
         HBox hBox = new HBox();
