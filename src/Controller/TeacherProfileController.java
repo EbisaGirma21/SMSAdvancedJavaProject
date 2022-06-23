@@ -167,9 +167,9 @@ public class TeacherProfileController implements Initializable {
         window.setScene(scene);
 
         changeUserNameBtn.setOnAction(e -> {
-            // if (!selectedRowLabel.getText().equals("No rows has been selected")) {
+
             window.show();
-            // }
+
         });
     }
 }

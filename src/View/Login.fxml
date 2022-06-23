@@ -48,7 +48,7 @@
             </Label>
             <TextField fx:id="userNameTextFeild" prefHeight="26.0" prefWidth="237.0" promptText="Username" style="-fx-border-color: #4D77FF;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <FontAwesomeIcon iconName="LOCK" size="2em" GridPane.rowIndex="4" />
-            <JFXButton fx:id="loginButton" buttonType="RAISED" prefHeight="38.0" prefWidth="91.0" style="-fx-background-color: #4D77FF;" text="Login" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+            <JFXButton fx:id="loginButton" buttonType="RAISED" prefHeight="38.0" prefWidth="91.0" style="-fx-background-color: #4d77ff;" text="Login" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
             <FontAwesomeIcon iconName="USER" size="2em" GridPane.rowIndex="3" />
             <Label text="Account Type:" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <font>
