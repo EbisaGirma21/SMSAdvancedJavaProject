@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class DatabaseAccess {
     private final static String DB_URL = "jdbc:mysql://localhost/SMS";
     private final static String user = "root";
-    private final static String password = "Eg1325#@";
+    private final static String password = "root";
     Connection connection = null;
 
     public DatabaseAccess() {
